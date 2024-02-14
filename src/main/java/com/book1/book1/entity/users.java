@@ -1,6 +1,11 @@
 package com.book1.book1.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,6 +18,10 @@ public class users {
     private String bookName;
     private String authorName;
     private String language;
+
+    public users() {
+    }
+
 
     // Getters and setters
     public int getId() {
